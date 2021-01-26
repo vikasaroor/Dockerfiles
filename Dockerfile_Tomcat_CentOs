@@ -1,14 +1,13 @@
 FROM centos
 
-MAINTAINER devopstrainingblr@outlook.com
+MAINTAINER nareshdara200@gmail.com
 
 RUN mkdir /opt/tomcat/
 
 WORKDIR /opt/tomcat
-#RUN curl -O http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz
-ADD http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.43/bin/apache-tomcat-8.5.43.tar.gz .
+ADD https://downloads.apache.org/tomcat/tomcat-9/v9.0.41/bin/apache-tomcat-9.0.41.tar.gz .
 RUN tar xvfz apache*.tar.gz
-RUN mv apache-tomcat-8.5.43/* /opt/tomcat/.
+RUN mv apache-tomcat-9.0.41/* /opt/tomcat/.
 RUN yum -y install java
 RUN java -version
 
