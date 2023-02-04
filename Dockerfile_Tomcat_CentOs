@@ -5,9 +5,9 @@ MAINTAINER nareshdara200@gmail.com
 RUN mkdir /opt/tomcat/
 
 WORKDIR /opt/tomcat
-ADD https://downloads.apache.org/tomcat/tomcat-9/v9.0.50/bin/apache-tomcat-9.0.50.tar.gz .
+ADD https://downloads.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz .
 RUN tar xvfz apache*.tar.gz
-RUN mv apache-tomcat-9.0.50/* /opt/tomcat/.
+RUN mv apache-tomcat-9.0.71/* /opt/tomcat/.
 RUN yum -y install java
 RUN java -version
 
